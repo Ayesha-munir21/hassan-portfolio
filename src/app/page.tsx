@@ -305,24 +305,6 @@ export default function Home() {
               </div>
             </section>
 
-            {/* Footer with credit */}
-            <footer className="max-w-md pb-16 text-xs text-neutral-500 sm:pb-0 font-sans">
-              <p>
-                Built with{" "}
-                <span className="text-neutral-400 hover:text-teal-300">Next.js</span>,{" "}
-                <span className="text-neutral-400 hover:text-teal-300">Tailwind CSS</span> and{" "}
-                <span className="text-neutral-400 hover:text-teal-300">TypeScript</span>.
-                Inspired by the layouts of{" "}
-                <a
-                  className="font-medium text-neutral-400 hover:text-teal-300 focus-visible:text-teal-300"
-                  href="https://brittanychiang.com"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  brittanychiang.com
-                </a>.
-              </p>
-            </footer>
 
           </main>
         </div>
