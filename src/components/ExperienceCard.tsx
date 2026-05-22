@@ -9,9 +9,7 @@ export default function ExperienceCard({ exp }: ExperienceCardProps) {
   return (
     <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
       {/* Background Hover Glassmorphism effect */}
-      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#252526]/40 lg:group-hover:border lg:group-hover:border-[#333333]/50 lg:group-hover:backdrop-blur-md lg:group-hover:shadow-xl lg:group-hover:shadow-black/20"></div>
-
-      {/* Date Column - Clean Sans-serif */}
+           {/* Date Column - Clean Sans-serif */}
       <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-neutral-500 sm:col-span-2 font-sans animate-fade-in" aria-label={exp.duration}>
         {exp.duration}
       </header>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* VS Code Dark Colors */
+  /* VS Code Dark Color Palette */
   --background: #1e1e1e; 
   --foreground: #d4d4d4; 
   --accent: #2dd4bf;       /* Teal/Cyan */
@@ -12,14 +12,22 @@
   --border-color: #333333;
 }
 
+/* Base Styles */
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom scrollbar matching VS Code's editor scrollbar */
+/* Custom Selection Color */
+::selection {
+  background-color: rgba(45, 212, 191, 0.2);
+  color: #2dd4bf;
+}
+
+/* VS Code Style Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -38,7 +46,24 @@ body {
   background: #4f4f4f;
 }
 
-/* Technical custom cursor or focus rings */
-.focus-ring {
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1e1e1e];
+/* Smooth Transitions for links and buttons */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* Simple Glassmorphism for Cards (Subtle) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent);
+}
+
+/* Fix for Layout shifting on scroll */
+html {
+  overflow-y: scroll;
 }
