@@ -39,7 +39,7 @@ export const portfolioData = {
     socials: {
       github: "https://github.com/hassanashraf",
       linkedin: "https://www.linkedin.com/in/hassan-a-5506196/",
-      email: "mailto:hassan.ashraf.sahi@gmail.com"
+      email: "hassan.ashraf.sahi@gmail.com"
     }
   },
   skills: [

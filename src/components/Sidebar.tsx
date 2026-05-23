@@ -25,8 +25,6 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function Sidebar({ activeSection }: SidebarProps) {
-  const { profile } = portfolioData;
-
   const navItems = [
     { label: "About", id: "about" },
     { label: "Experience", id: "experience" },
@@ -35,73 +33,51 @@ export default function Sidebar({ activeSection }: SidebarProps) {
   ];
 
   return (
-    <div className="flex flex-col h-full justify-between py-2 md:py-6 lg:py-0">
+    <div className="flex flex-col h-full justify-between py-2 md:py-6 lg:py-0 font-sans">
       <div>
         {/* Profile Picture */}
         <div className="mb-6 flex items-start justify-start">
           <div className="relative w-[100px] h-[100px] rounded-full overflow-hidden border-2 border-[#2dd4bf] shadow-lg shadow-black/30 bg-[#1e1e1e]">
-            <Image
-              src="/profile.jpg"
-              alt="Hassan Ashraf"
-              fill
-              className="object-cover"
-              priority
-            />
+            <Image src="/profile.jpg" alt="Hassan Ashraf" fill className="object-cover" priority />
           </div>
         </div>
         
-        {/* Adjusted Font and Whitespace for Name in one line */}
-        <h1 className="text-3xl lg:text-4xl font-bold tracking-tight text-slate-100 font-sans whitespace-nowrap">
+        {/* Name In One Line */}
+        <h1 className="text-2xl lg:text-3xl font-bold tracking-tight text-slate-100 whitespace-nowrap">
           Hassan Ashraf
         </h1>
-        <h2 className="text-base font-semibold text-teal-400 mt-2.5 font-sans tracking-wide">
+        <h2 className="text-base font-semibold text-teal-400 mt-2.5 tracking-wide">
           Technology Leader &amp; AI/ML Platform Expert
         </h2>
-        <p className="text-[#999999] text-sm font-sans mt-4 leading-relaxed max-w-xs">
-          AI/ML Strategy &amp; Data Platform Expert. Building enterprise-grade, highly scalable cloud infrastructure for complex data models.
+        <p className="text-[#999999] text-sm mt-4 leading-relaxed max-w-xs">
+          AI/ML Strategy &amp; Data Platform Expert. Building enterprise-grade, highly scalable cloud infrastructure.
         </p>
 
-        {/* Scrollspy active navigation */}
         <nav className="mt-16 hidden lg:block">
-          <ul className="space-y-4 font-sans">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.id;
-              return (
-                <li key={item.id}>
-                  <a href={`#${item.id}`} className="group flex items-center py-2.5">
-                    <span
-                      className={`h-[1px] transition-all duration-300 mr-4 ${
-                        isActive
-                          ? "w-16 bg-teal-400"
-                          : "w-8 bg-neutral-600 group-hover:w-16 group-hover:bg-teal-400"
-                      }`}
-                    ></span>
-                    <span
-                      className={`text-xs uppercase tracking-widest transition-colors duration-300 ${
-                        isActive
-                          ? "text-teal-400 font-semibold"
-                          : "text-neutral-500 group-hover:text-teal-400"
-                      }`}
-                    >
-                      {item.label}
-                    </span>
-                  </a>
-                </li>
-              );
-            })}
+          <ul className="space-y-4">
+            {navItems.map((item) => (
+              <li key={item.id}>
+                <a href={`#${item.id}`} className="group flex items-center py-2.5">
+                  <span className={`h-[1px] transition-all duration-300 mr-4 ${activeSection === item.id ? "w-16 bg-teal-400" : "w-8 bg-neutral-600 group-hover:w-16 group-hover:bg-teal-400"}`}></span>
+                  <span className={`text-xs uppercase tracking-widest transition-colors duration-300 ${activeSection === item.id ? "text-teal-400 font-semibold" : "text-neutral-500 group-hover:text-teal-400"}`}>
+                    {item.label}
+                  </span>
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
 
-      {/* Social links */}
+      {/* Social links (Dynamically driven from portfolioData) */}
       <div className="flex items-center space-x-5 mt-8 lg:mt-0 pt-4 border-t border-[#333333] lg:border-t-0">
-        <a href={profile.socials.github} target="_blank" className="text-neutral-500 hover:text-teal-400 transition-colors">
+        <a href={portfolioData.profile.socials.github} target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-teal-400 transition-colors">
           <GithubIcon className="h-5 w-5" />
         </a>
-        <a href={profile.socials.linkedin} target="_blank" className="text-neutral-500 hover:text-teal-400 transition-colors">
+        <a href={portfolioData.profile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-teal-400 transition-colors">
           <LinkedinIcon className="h-5 w-5" />
         </a>
-        <a href={`mailto:${profile.socials.email}`} className="text-neutral-500 hover:text-teal-400 transition-colors">
+        <a href={`mailto:${portfolioData.profile.socials.email}`} className="text-neutral-500 hover:text-teal-400 transition-colors">
           <Mail className="h-5 w-5" />
         </a>
       </div>
