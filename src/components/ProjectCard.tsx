@@ -16,11 +16,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="z-10 sm:col-span-8">
         <h3 className="font-semibold leading-snug text-slate-200 font-sans">
           <div>
-            <span className="inline-flex items-baseline font-semibold leading-tight text-slate-200 hover:text-teal-400 focus-visible:text-teal-400 text-base">
+            <span className="inline-flex items-baseline font-semibold leading-tight text-slate-200 hover:text-indigo-400 focus-visible:text-indigo-400 text-base">
               <span className="absolute -inset-x-4 -inset-y-4 z-20 hidden rounded md:-inset-x-6 lg:block"></span>
               <span>
                 {project.title}
-                <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#858585] group-hover:text-teal-400" />
+                <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#858585] group-hover:text-indigo-400" />
               </span>
             </span>
           </div>
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <ul className="mt-3.5 space-y-2 text-xs text-neutral-400 font-sans">
             {project.highlights.map((highlight, idx) => (
               <li key={idx} className="flex gap-2 items-start leading-relaxed">
-                <span className="text-teal-400 select-none mt-1 text-[10px]">▸</span>
+                <span className="text-indigo-400 select-none mt-1 text-[10px]">▸</span>
                 <span>{highlight}</span>
               </li>
             ))}
@@ -44,7 +44,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <ul className="mt-4 flex flex-wrap gap-1.5 font-sans" aria-label="Technologies used">
           {project.skills.map((skill) => (
             <li key={skill}>
-              <div className="flex items-center rounded bg-teal-500/10 border border-teal-500/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider leading-5 text-teal-300 hover:bg-teal-500/20 transition-colors">
+              <div className="flex items-center rounded bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider leading-5 text-indigo-300 hover:bg-indigo-500/20 transition-colors">
                 {skill}
               </div>
             </li>

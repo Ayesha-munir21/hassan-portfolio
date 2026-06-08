@@ -60,13 +60,13 @@ export default function BlogListing() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#1e1e1e] text-[#d4d4d4] font-sans">
-      <nav className="sticky top-0 z-30 border-b border-[#333333]/50 bg-[#1e1e1e]/90 px-6 py-4 backdrop-blur-md">
+    <div className="min-h-screen bg-[#0f172a] text-[#d4d4d4] font-sans">
+      <nav className="sticky top-0 z-30 border-b border-[#333333]/50 bg-[#0f172a]/90 px-6 py-4 backdrop-blur-md">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-sm text-neutral-500 hover:text-teal-400">
+          <Link href="/" className="flex items-center gap-2 text-sm text-neutral-500 hover:text-indigo-400">
             <ArrowLeft size={16} /> <span>Back to Portfolio</span>
           </Link>
-          <Link href="/admin" className="text-xs text-teal-400 border border-teal-500/20 px-4 py-1.5 rounded-full hover:bg-teal-500/10">
+          <Link href="/admin" className="text-xs text-indigo-400 border border-indigo-500/20 px-4 py-1.5 rounded-full hover:bg-indigo-500/10">
             Write Post
           </Link>
         </div>
@@ -79,17 +79,17 @@ export default function BlogListing() {
         </header>
 
         {loading ? (
-          <div className="flex justify-center py-20 text-teal-400 animate-pulse">Loading posts...</div>
+          <div className="flex justify-center py-20 text-indigo-400 animate-pulse">Loading posts...</div>
         ) : (
           <div className="space-y-8">
             {posts.map((post) => (
-              <article key={post.slug} className="p-6 rounded-xl border border-[#333333]/40 bg-[#181818]/60 hover:border-teal-500/30 transition-all">
-                <div className="text-xs text-teal-400 mb-3 font-bold uppercase">{post.category}</div>
-                <h2 className="text-xl font-bold text-slate-100 hover:text-teal-400">
+              <article key={post.slug} className="p-6 rounded-xl border border-[#333333]/40 bg-[#181818]/60 hover:border-indigo-500/30 transition-all">
+                <div className="text-xs text-indigo-400 mb-3 font-bold uppercase">{post.category}</div>
+                <h2 className="text-xl font-bold text-slate-100 hover:text-indigo-400">
                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h2>
                 <p className="mt-3 text-sm text-neutral-400 leading-relaxed">{post.excerpt}</p>
-                <Link href={`/blog/${post.slug}`} className="mt-5 inline-block text-xs font-bold text-teal-400 hover:underline">
+                <Link href={`/blog/${post.slug}`} className="mt-5 inline-block text-xs font-bold text-indigo-400 hover:underline">
                   READ ARTICLE →
                 </Link>
               </article>

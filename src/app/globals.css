@@ -4,10 +4,10 @@
 
 :root {
   /* VS Code Dark Color Palette */
-  --background: #1e1e1e; 
+  --background: #0f172a; 
   --foreground: #d4d4d4; 
-  --accent: #2dd4bf;       /* Teal/Cyan */
-  --sidebar-bg: #181818;
+  --accent: #6366f1;       /* Electric Indigo (#6366f1) */
+  --sidebar-bg: #0f172a;
   --card-hover-bg: #252526;
   --border-color: #333333;
 }
@@ -23,8 +23,8 @@ body {
 
 /* Custom Selection Color */
 ::selection {
-  background-color: rgba(45, 212, 191, 0.2);
-  color: #2dd4bf;
+  background-color: rgba(99, 102, 241, 0.2);
+  color: #6366f1;
 }
 
 /* VS Code Style Custom Scrollbar */
@@ -34,7 +34,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: #0f172a;
 }
 
 ::-webkit-scrollbar-thumb {

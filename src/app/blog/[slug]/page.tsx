@@ -33,18 +33,18 @@ export default function BlogPostDetail() {
     if (params.slug) fetchPost();
   }, [params.slug]);
 
-  if (loading) return <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center text-teal-400 font-mono">Loading...</div>;
-  if (!post) return <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center text-red-400">Post Not Found</div>;
+  if (loading) return <div className="min-h-screen bg-[#0f172a] flex items-center justify-center text-indigo-400 font-mono">Loading...</div>;
+  if (!post) return <div className="min-h-screen bg-[#0f172a] flex items-center justify-center text-red-400">Post Not Found</div>;
 
   return (
-    <div className="min-h-screen bg-[#1e1e1e] text-[#d4d4d4] font-sans px-6 py-12 lg:py-20">
+    <div className="min-h-screen bg-[#0f172a] text-[#d4d4d4] font-sans px-6 py-12 lg:py-20">
       <div className="max-w-3xl mx-auto">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-teal-400 mb-10 transition-colors">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-indigo-400 mb-10 transition-colors">
           <ArrowLeft size={16} /> Back to Portfolio
         </Link>
         <article>
           <header className="mb-10 border-b border-[#333333]/50 pb-8 text-slate-100">
-            <div className="text-[10px] font-bold text-teal-400 uppercase mb-3">{post.category}</div>
+            <div className="text-[10px] font-bold text-indigo-400 uppercase mb-3">{post.category}</div>
             <h1 className="text-2xl lg:text-3xl font-bold">{post.title}</h1>
             <div className="flex items-center gap-2 mt-4 text-xs text-neutral-500 font-sans">
               <Calendar size={14} /> {new Date(post.created_at).toLocaleDateString()}
