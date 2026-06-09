@@ -3,8 +3,9 @@ export const dynamic = 'force-dynamic';
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, Search, Calendar, Clock, RefreshCw } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import { BlogPost } from "./blogData";
 
 // Inhi posts ka data hum Detail page par bhi use karenge
 const FALLBACK_POSTS = [
@@ -33,24 +34,24 @@ const FALLBACK_POSTS = [
 ];
 
 export default function BlogListing() {
-  const [posts, setPosts] = useState<any[]>([]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const { data, error } = await supabase
+        const { data } = await supabase
           .from("blogs")
           .select("*")
           .order("created_at", { ascending: false });
 
         if (data && data.length > 0) {
           // Merge Supabase posts with Fallback posts
-          setPosts([...data, ...FALLBACK_POSTS]);
+          setPosts([...data, ...FALLBACK_POSTS] as BlogPost[]);
         } else {
           setPosts(FALLBACK_POSTS);
         }
-      } catch (err) {
+      } catch {
         setPosts(FALLBACK_POSTS);
       } finally {
         setLoading(false);

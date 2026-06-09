@@ -81,39 +81,43 @@ export default function Home() {
             {/* 04. WRITING SECTION (FULL PREVIEWS RESTORED) */}
             <section id="blog" className="mb-8 scroll-mt-16 md:mb-10" aria-label="Writing">
               <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Writing</h2>
-              <div className="space-y-12 mb-10">
+              <div className="space-y-10 mb-10">
                 
                 {/* Blog Preview 1 */}
-                <div className="grid sm:grid-cols-8 gap-4 group">
-                  <header className="text-xs font-semibold uppercase text-neutral-500 sm:col-span-2 mt-1">May 15, 2026</header>
-                  <div className="sm:col-span-6">
-                    <h3 className="text-slate-200 font-semibold text-base group-hover:text-indigo-400 transition-colors">
-                      <Link href="/blog/scaling-mlops-databricks-lakehouse">Scaling MLOps: Automating Lifecycles for 100+ Models on Databricks Lakehouse</Link>
-                    </h3>
-                    <p className="mt-2 text-xs text-neutral-400 leading-relaxed">
-                      How we leveraged Databricks Unity Catalog, MLflow, and strict schema registries to build automated training, validation, and deployment gates.
-                    </p>
-                    <div className="mt-3 flex gap-2">
-                      <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">Databricks</span>
-                      <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">MLOps</span>
-                    </div>
+                <div className="flex flex-col group">
+                  <h3 className="text-slate-200 font-semibold text-base group-hover:text-indigo-400 transition-colors">
+                    <Link href="/blog/scaling-mlops-databricks-lakehouse">Scaling MLOps: Automating Lifecycles for 100+ Models on Databricks Lakehouse</Link>
+                  </h3>
+                  <div className="flex items-center gap-2 text-xs text-neutral-500 mt-1 font-sans">
+                    <span>May 15, 2026</span>
+                    <span>•</span>
+                    <span className="text-indigo-400">AI/ML Infrastructure</span>
+                  </div>
+                  <p className="mt-2 text-xs text-neutral-400 leading-relaxed">
+                    How we leveraged Databricks Unity Catalog, MLflow, and strict schema registries to build automated training, validation, and deployment gates.
+                  </p>
+                  <div className="mt-3 flex gap-2">
+                    <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">Databricks</span>
+                    <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">MLOps</span>
                   </div>
                 </div>
 
                 {/* Blog Preview 2 */}
-                <div className="grid sm:grid-cols-8 gap-4 group">
-                  <header className="text-xs font-semibold uppercase text-neutral-500 sm:col-span-2 mt-1">Apr 02, 2026</header>
-                  <div className="sm:col-span-6">
-                    <h3 className="text-slate-200 font-semibold text-base group-hover:text-indigo-400 transition-colors">
-                      <Link href="/blog/standardizing-data-ingestion-customer-onboarding">Standardizing Data Ingestion: Reducing Onboarding from 2 Weeks to 8 Hours</Link>
-                    </h3>
-                    <p className="mt-2 text-xs text-neutral-400 leading-relaxed">
-                      A deep dive into building declarative ingestion templates using AdVerity, PySpark, and custom schema validation pipelines.
-                    </p>
-                    <div className="mt-3 flex gap-2">
-                      <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">PySpark</span>
-                      <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">Lakehouse</span>
-                    </div>
+                <div className="flex flex-col group">
+                  <h3 className="text-slate-200 font-semibold text-base group-hover:text-indigo-400 transition-colors">
+                    <Link href="/blog/standardizing-data-ingestion-customer-onboarding">Standardizing Data Ingestion: Reducing Onboarding from 2 Weeks to 8 Hours</Link>
+                  </h3>
+                  <div className="flex items-center gap-2 text-xs text-neutral-500 mt-1 font-sans">
+                    <span>Apr 02, 2026</span>
+                    <span>•</span>
+                    <span className="text-indigo-400">Data Engineering</span>
+                  </div>
+                  <p className="mt-2 text-xs text-neutral-400 leading-relaxed">
+                    A deep dive into building declarative ingestion templates using AdVerity, PySpark, and custom schema validation pipelines.
+                  </p>
+                  <div className="mt-3 flex gap-2">
+                    <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">PySpark</span>
+                    <span className="text-[10px] text-indigo-300 bg-indigo-500/10 px-2 py-0.5 rounded">Lakehouse</span>
                   </div>
                 </div>
 

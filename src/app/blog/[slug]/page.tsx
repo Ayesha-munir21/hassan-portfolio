@@ -5,11 +5,11 @@ import { supabase } from "@/lib/supabase";
 import { ArrowLeft, Calendar } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { FALLBACK_POSTS } from "../blogData"; 
+import { FALLBACK_POSTS, BlogPost } from "../blogData"; 
 
 export default function BlogPostDetail() {
   const params = useParams();
-  const [post, setPost] = useState<any>(null);
+  const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
