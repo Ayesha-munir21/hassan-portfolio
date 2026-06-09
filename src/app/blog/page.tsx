@@ -7,7 +7,7 @@ import { ArrowLeft, Search, Calendar, Clock, RefreshCw } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 // Inhi posts ka data hum Detail page par bhi use karenge
-export const FALLBACK_POSTS = [
+const FALLBACK_POSTS = [
   {
     id: 1,
     title: "Scaling MLOps: Automating Lifecycles for 100+ Models on Databricks Lakehouse",
