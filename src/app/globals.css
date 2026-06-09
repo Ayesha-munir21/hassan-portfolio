@@ -2,68 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* VS Code Dark Color Palette */
-  --background: #0f172a; 
-  --foreground: #d4d4d4; 
-  --accent: #6366f1;       /* Electric Indigo (#6366f1) */
-  --sidebar-bg: #0f172a;
-  --card-hover-bg: #252526;
-  --border-color: #333333;
-}
-
-/* Base Styles */
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Custom Selection Color */
-::selection {
-  background-color: rgba(99, 102, 241, 0.2);
-  color: #6366f1;
-}
-
-/* VS Code Style Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0f172a;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #424242;
-  border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #4f4f4f;
-}
-
-/* Smooth Transitions for links and buttons */
-a, button {
-  transition: all 0.2s ease;
-}
-
-/* Simple Glassmorphism for Cards (Subtle) */
-.glass-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-}
-
-.glass-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--accent);
-}
-
-/* Fix for Layout shifting on scroll */
-html {
-  overflow-y: scroll;
+  background-color: #1e1e1e !important;
+  color: #d4d4d4;
+  margin: 0;
+  font-family: sans-serif;
 }

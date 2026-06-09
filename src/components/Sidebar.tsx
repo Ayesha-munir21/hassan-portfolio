@@ -37,7 +37,7 @@ export default function Sidebar({ activeSection }: SidebarProps) {
       <div>
         {/* Profile Picture */}
         <div className="mb-6 flex items-start justify-start">
-          <div className="relative w-[100px] h-[100px] rounded-full overflow-hidden border border-[#333333] shadow-lg shadow-black/30 bg-[#0f172a]">
+          <div className="relative w-[100px] h-[100px] rounded-full overflow-hidden border border-[#333333] shadow-lg shadow-black/30 bg-[#1e1e1e]">
             <Image src="/profile.jpg" alt="Hassan Ashraf" fill className="object-cover" priority />
           </div>
         </div>

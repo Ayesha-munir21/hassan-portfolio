@@ -29,11 +29,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#0f172a] text-[#999999] font-sans selection:bg-indigo-500/20 selection:text-indigo-300 transition-colors duration-300">
+    <div className="relative min-h-screen bg-[#1e1e1e] text-[#999999] font-sans selection:bg-indigo-500/20 selection:text-indigo-300 transition-colors duration-300">
       <div className="flex flex-col lg:flex-row min-h-screen w-full">
         
         {/* Left Sidebar */}
-        <div className="w-full lg:w-[35%] xl:w-[30%] lg:bg-[#0f172a] lg:border-r lg:border-[#333333]/50 lg:sticky lg:top-0 lg:h-screen px-6 py-12 md:px-12 lg:px-16 xl:px-20 lg:py-24 z-30">
+        <div className="w-full lg:w-[35%] xl:w-[30%] lg:bg-[#1e1e1e] lg:border-r lg:border-[#333333]/50 lg:sticky lg:top-0 lg:h-screen px-6 py-12 md:px-12 lg:px-16 xl:px-20 lg:py-24 z-30">
           <Sidebar activeSection={activeSection} />
         </div>
 

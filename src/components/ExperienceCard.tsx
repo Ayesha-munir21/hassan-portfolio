@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+
 import { Experience } from "@/data/portfolioData";
 
 interface ExperienceCardProps {
@@ -25,7 +25,6 @@ export default function ExperienceCard({ exp }: ExperienceCardProps) {
                 {exp.role} ·{" "}
                 <span className="inline-block text-slate-200 group-hover:text-indigo-400 transition-colors">
                   {exp.company}
-                  <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#858585] group-hover:text-indigo-400" />
                 </span>
               </span>
             </span>

@@ -114,7 +114,7 @@ export default function AdminPage() {
   // ─── Password Gate ─────────────────────────────────────────────────────────
   if (!authenticated) {
     return (
-      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center px-4 font-sans text-[#d4d4d4]">
+      <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center px-4 font-sans text-[#d4d4d4]">
         <div className="w-full max-w-md">
           <div className="flex flex-col items-center mb-8">
             <div className="h-12 w-12 rounded-full bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 mb-4 shadow-lg shadow-black/20">
@@ -159,9 +159,9 @@ export default function AdminPage() {
 
   // ─── Admin Panel ───────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen bg-[#0f172a] text-[#d4d4d4] font-sans">
+    <div className="min-h-screen bg-[#1e1e1e] text-[#d4d4d4] font-sans">
       {/* Premium Dashboard Top Bar */}
-      <nav className="sticky top-0 z-30 border-b border-[#333333]/50 bg-[#0f172a]/90 px-6 py-4 backdrop-blur-md">
+      <nav className="sticky top-0 z-30 border-b border-[#333333]/50 bg-[#1e1e1e]/90 px-6 py-4 backdrop-blur-md">
         <div className="max-w-3xl mx-auto flex items-center justify-between">
           <Link href="/blog" className="flex items-center gap-2 text-sm text-neutral-400 hover:text-indigo-400 transition-colors font-medium">
             <ArrowLeft size={16} />
@@ -233,7 +233,7 @@ export default function AdminPage() {
               type="text"
               name="slug"
               required
-              className={`${inputClass} text-neutral-500 bg-[#0f172a]/50`}
+              className={`${inputClass} text-neutral-500 bg-[#1e1e1e]/50`}
               placeholder="auto-generated-from-title"
               value={form.slug}
               onChange={handleChange}

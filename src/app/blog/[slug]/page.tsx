@@ -33,11 +33,11 @@ export default function BlogPostDetail() {
     if (params.slug) fetchPost();
   }, [params.slug]);
 
-  if (loading) return <div className="min-h-screen bg-[#0f172a] flex items-center justify-center text-indigo-400 font-mono">Loading...</div>;
-  if (!post) return <div className="min-h-screen bg-[#0f172a] flex items-center justify-center text-red-400">Post Not Found</div>;
+  if (loading) return <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center text-indigo-400 font-mono">Loading...</div>;
+  if (!post) return <div className="min-h-screen bg-[#1e1e1e] flex items-center justify-center text-red-400">Post Not Found</div>;
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-[#d4d4d4] font-sans px-6 py-12 lg:py-20">
+    <div className="min-h-screen bg-[#1e1e1e] text-[#d4d4d4] font-sans px-6 py-12 lg:py-20">
       <div className="max-w-3xl mx-auto">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-indigo-400 mb-10 transition-colors">
           <ArrowLeft size={16} /> Back to Portfolio

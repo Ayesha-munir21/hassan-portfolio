@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { ArrowUpRight } from "lucide-react";
 import { Project } from "@/data/portfolioData";
 
 interface ProjectCardProps {
@@ -20,7 +19,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <span className="absolute -inset-x-4 -inset-y-4 z-20 hidden rounded md:-inset-x-6 lg:block"></span>
               <span>
                 {project.title}
-                <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#858585] group-hover:text-indigo-400" />
               </span>
             </span>
           </div>

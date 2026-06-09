@@ -60,8 +60,8 @@ export default function BlogListing() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-[#d4d4d4] font-sans">
-      <nav className="sticky top-0 z-30 border-b border-[#333333]/50 bg-[#0f172a]/90 px-6 py-4 backdrop-blur-md">
+    <div className="min-h-screen bg-[#1e1e1e] text-[#d4d4d4] font-sans">
+      <nav className="sticky top-0 z-30 border-b border-[#333333]/50 bg-[#1e1e1e]/90 px-6 py-4 backdrop-blur-md">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 text-sm text-neutral-500 hover:text-indigo-400">
             <ArrowLeft size={16} /> <span>Back to Portfolio</span>
